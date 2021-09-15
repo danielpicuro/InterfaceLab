@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> Pi Home 2 </title>
+    <meta name="viewport" content="width=device-with,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+
+
+    <script>
+        function sse() {
+            var source = new EventSource('/stream');
+            source.onmessage = function(e) {
+                var out = document.getElementById('out');
+                out.innerHTML =  '  <li>'+ e.data + '</li>' + out.innerHTML;
+
+            };
+        }
+        sse();
+     </script>
+
+</head>
+<body>
+   {% block body %} {% endblock %}
+</body>
+</html>

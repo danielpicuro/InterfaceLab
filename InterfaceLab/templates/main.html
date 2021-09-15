@@ -1,0 +1,519 @@
+
+
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+   <h2>  Interfaz Gráfica Laboratorio Remoto  </h2>
+
+
+    <img src="{{ url_for('static', filename = 'images/pi_logo.png') }}" width="25" height="25">
+    <div class="container" style="margin: 0 auto;">
+        <div class="row">
+            <div class="col-lg-8  offset-lg-2">
+                <h4 class="mt-5">Video en vivo </h4>
+                <img src="{{ url_for('video_feed') }}" width="50%" >
+            </div>
+        </div>
+       </div>  
+
+    <table class="default" style="margin: 0 auto;">
+
+        <tr>
+      
+          <td>                       <h4>{{ pins[2].name }}
+            {% if pins[2].state == true %}
+                <strong>ON</strong></h2>
+         
+                <div class="col-md-12 text-center">
+                     <a href="/{{2}}/off" class="btn btn-danger" role="button">Key[0]</a>
+                </div>
+         
+         
+            {% else %}
+               is <strong>OFF</strong></h2>
+         
+                <div class="col-md-12 text-center">
+                     <a href="/{{2}}/on" class="btn  btn-success" role="button">Key[0]</a>
+                </div>
+         
+            {% endif %}
+         
+         <h4></td>
+      
+          <td><h4>{{ pins[3].name }}
+            {% if pins[3].state == true %}
+            is <strong>ON</strong></h2>
+        
+        <div class="col-md-12 text-center">
+            <a href="/{{3}}/off" class="btn btn-danger" role="button">Key[1]</a>
+        </div>
+        
+        
+        {% else %}
+        is <strong>OFF</strong></h2>
+        
+        <div class="col-md-12 text-center">
+            <a href="/{{3}}/on" class="btn  btn-success" role="button">Key[1]</a>
+        </div>
+        
+        {% endif %}
+        
+        <h4>
+         
+         <h4></td>
+      
+          <td><h4>{{ pins[4].name }}
+            {% if pins[4].state == true %}
+            is <strong>ON</strong></h2>
+        
+        <div class="col-md-12 text-center">
+            <a href="/{{4}}/off" class="btn btn-danger" role="button">Key[2]</a>
+        </div>
+        
+        
+        {% else %}
+        is <strong>OFF</strong></h2>
+        
+        <div class="col-md-12 text-center">
+            <a href="/{{4}}/on" class="btn  btn-success" role="button">Key[2]</a>
+        </div>
+        
+        {% endif %}
+        
+        <h4></td>
+
+            <td><h4>{{ pins[14].name }}
+                {% if pins[14].state == true %}
+                is <strong>ON</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{14}}/off" class="btn btn-danger" role="button">Key[3]</a>
+            </div>
+            
+            
+            {% else %}
+            is <strong>OFF</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{14}}/on" class="btn  btn-success" role="button">Key[3]</a>
+            </div>
+            
+            {% endif %}
+            
+            <h4></td>
+      
+            <td><h4>{{ pins[15].name }}
+                {% if pins[15].state == true %}
+                is <strong>ON</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{15}}/off" class="btn btn-danger" role="button">Key[4]</a>
+            </div>
+            
+            
+            {% else %}
+            is <strong>OFF</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{15}}/on" class="btn  btn-success" role="button">Key[4]</a>
+            </div>
+            
+            {% endif %}
+            
+            <h4></td>
+            
+        
+            <td><h4>{{ pins[17].name }}
+                {% if pins[17].state == true %}
+                is <strong>ON</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{17}}/off" class="btn btn-danger" role="button">SW[0]</a>
+            </div>
+            
+            
+            {% else %}
+            is <strong>OFF</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{17}}/on" class="btn  btn-success" role="button">SW[0]</a>
+            </div>
+            
+            {% endif %}
+            
+            <h4></td>
+      
+        </tr>
+      
+        <tr>
+      
+          <td><h4>{{ pins[18].name }}
+            {% if pins[18].state == true %}
+            is <strong>ON</strong></h2>
+        
+        <div class="col-md-12 text-center">
+            <a href="/{{18}}/off" class="btn btn-danger" role="button">SW[1]</a>
+        </div>
+        
+        
+        {% else %}
+        is <strong>OFF</strong></h2>
+        
+        <div class="col-md-12 text-center">
+            <a href="/{{18}}/on" class="btn  btn-success" role="button">SW[1]</a>
+        </div>
+        
+        {% endif %}
+        
+        <h4></td>
+      
+          <td><h4>{{ pins[27].name }}
+            {% if pins[27].state == true %}
+            is <strong>ON</strong></h2>
+        
+        <div class="col-md-12 text-center">
+            <a href="/{{27}}/off" class="btn btn-danger" role="button">SW[2]</a>
+        </div>
+        
+        
+        {% else %}
+        is <strong>OFF</strong></h2>
+        
+        <div class="col-md-12 text-center">
+            <a href="/{{27}}/on" class="btn  btn-success" role="button">SW[2]</a>
+        </div>
+        
+        {% endif %}
+        
+        <h4></td>
+      
+          <td><h4>{{ pins[22].name }}
+            {% if pins[22].state == true %}
+            is <strong>ON</strong></h2>
+        
+        <div class="col-md-12 text-center">
+            <a href="/{{22}}/off" class="btn btn-danger" role="button">SW[3]</a>
+        </div>
+        
+        
+        {% else %}
+        is <strong>OFF</strong></h2>
+        
+        <div class="col-md-12 text-center">
+            <a href="/{{22}}/on" class="btn  btn-success" role="button">SW[3]</a>
+        </div>
+        
+        {% endif %}
+        
+        <h4></td>
+
+          <td><h4>{{ pins[23].name }}
+            {% if pins[23].state == true %}
+            is <strong>ON</strong></h2>
+        
+        <div class="col-md-12 text-center">
+            <a href="/{{23}}/off" class="btn btn-danger" role="button">SW[4]</a>
+        </div>
+        
+        
+        {% else %}
+        is <strong>OFF</strong></h2>
+        
+        <div class="col-md-12 text-center">
+            <a href="/{{23}}/on" class="btn  btn-success" role="button">SW[4]</a>
+        </div>
+        
+        {% endif %}
+        
+        <h4></td>
+      
+          <td><h4>{{ pins[24].name }}
+            {% if pins[24].state == true %}
+            is <strong>ON</strong></h2>
+        
+        <div class="col-md-12 text-center">
+            <a href="/{{24}}/off" class="btn btn-danger" role="button">SW[5]</a>
+        </div>
+        
+        
+        {% else %}
+        is <strong>OFF</strong></h2>
+        
+        <div class="col-md-12 text-center">
+            <a href="/{{24}}/on" class="btn  btn-success" role="button">SW[5]</a>
+        </div>
+        
+        {% endif %}
+        
+        <h4></td>
+      
+          <td><h4>{{ pins[10].name }}
+            {% if pins[10].state == true %}
+            is <strong>ON</strong></h2>
+        
+        <div class="col-md-12 text-center">
+            <a href="/{{10}}/off" class="btn btn-danger" role="button">SW[6]</a>
+        </div>
+        
+        
+        {% else %}
+        is <strong>OFF</strong></h2>
+        
+        <div class="col-md-12 text-center">
+            <a href="/{{10}}/on" class="btn  btn-success" role="button">SW[6]</a>
+        </div>
+        
+        {% endif %}
+        
+        <h4></td>
+      
+        </tr>
+
+
+        <tr>
+       
+            <td><h4>{{ pins[9].name }}
+                {% if pins[9].state == true %}
+                is <strong>ON</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{9}}/off" class="btn btn-danger" role="button">SW[7]</a>
+            </div>
+            
+            
+            {% else %}
+            is <strong>OFF</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{9}}/on" class="btn  btn-success" role="button">SW[7]</a>
+            </div>
+            
+            {% endif %}
+            
+            <h4></td>
+        
+            <td><h4>{{ pins[25].name }}
+                {% if pins[25].state == true %}
+                is <strong>ON</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{25}}/off" class="btn btn-danger" role="button">SW[8]</a>
+            </div>
+            
+            
+            {% else %}
+            is <strong>OFF</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{25}}/on" class="btn  btn-success" role="button">SW[8]</a>
+            </div>
+            
+            {% endif %}
+            
+            <h4></td>
+
+            <td><h4>{{ pins[11].name }}
+                {% if pins[11].state == true %}
+                is <strong>ON</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{11}}/off" class="btn btn-danger" role="button">SW[9]</a>
+            </div>
+            
+            
+            {% else %}
+            is <strong>OFF</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{11}}/on" class="btn  btn-success" role="button">SW[9]</a>
+            </div>
+            
+            {% endif %}
+            
+            <h4></td>
+        
+            <td><h4>{{ pins[8].name }}
+                {% if pins[8].state == true %}
+                is <strong>ON</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{8}}/off" class="btn btn-danger" role="button">SW[10]</a>
+            </div>
+            
+            
+            {% else %}
+            is <strong>OFF</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{8}}/on" class="btn  btn-success" role="button">SW[10]</a>
+            </div>
+            
+            {% endif %}
+            
+            <h4></td>
+        
+            <td><h4>{{ pins[7].name }}
+                {% if pins[7].state == true %}
+                is <strong>ON</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{7}}/off" class="btn btn-danger" role="button">SW[11]</a>
+            </div>
+            
+            
+            {% else %}
+            is <strong>OFF</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{7}}/on" class="btn  btn-success" role="button">SW[11]</a>
+            </div>
+            
+            {% endif %}
+            
+            <h4></td>
+            
+                <td><h4>{{ pins[0].name }}
+                    {% if pins[0].state == true %}
+                    is <strong>ON</strong></h2>
+                
+                <div class="col-md-12 text-center">
+                    <a href="/{{0}}/off" class="btn btn-danger" role="button">SW[12]</a>
+                </div>
+                
+                
+                {% else %}
+                is <strong>OFF</strong></h2>
+                
+                <div class="col-md-12 text-center">
+                    <a href="/{{0}}/on" class="btn  btn-success" role="button">SW[12]</a>
+                </div>
+                
+                {% endif %}
+                
+                <h4></td>
+        
+          </tr>
+
+          <tr>
+
+            
+        
+            <td><h4>{{ pins[1].name }}
+                {% if pins[1].state == true %}
+                is <strong>ON</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{1}}/off" class="btn btn-danger" role="button">SW[13]</a>
+            </div>
+            
+            
+            {% else %}
+            is <strong>OFF</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{1}}/on" class="btn  btn-success" role="button">SW[13]</a>
+            </div>
+            
+            {% endif %}
+            
+            <h4></td>
+        
+            <td><h4>{{ pins[5].name }}
+                {% if pins[5].state == true %}
+                is <strong>ON</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{5}}/off" class="btn btn-danger" role="button">SW[14]</a>
+            </div>
+            
+            
+            {% else %}
+            is <strong>OFF</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{5}}/on" class="btn  btn-success" role="button">SW[14]</a>
+            </div>
+            
+            {% endif %}
+            
+            <h4></td>
+
+            <td><h4>{{ pins[6].name }}
+                {% if pins[6].state == true %}
+                is <strong>ON</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{6}}/off" class="btn btn-danger" role="button">SW[15]</a>
+            </div>
+            
+            
+            {% else %}
+            is <strong>OFF</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{6}}/on" class="btn  btn-success" role="button">SW[15]</a>
+            </div>
+            
+            {% endif %}
+            
+            <h4></td>
+        
+            <td><h4>{{ pins[12].name }}
+                {% if pins[12].state == true %}
+                is <strong>ON</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{12}}/off" class="btn btn-danger" role="button">SW[16]</a>
+            </div>
+            
+            
+            {% else %}
+            is <strong>OFF</strong></h2>
+            
+            <div class="col-md-12 text-center">
+                <a href="/{{12}}/on" class="btn  btn-success" role="button">SW[16]</a>
+            </div>
+            
+            {% endif %}
+            
+            <h4></td>
+
+                            <h4></td>
+        
+        
+                    <td><h4>{{ pins[13].name }}
+                        {% if pins[13].state == true %}
+                        is <strong>ON</strong></h2>
+                    
+                    <div class="col-md-12 text-center">
+                        <a href="/{{13}}/off" class="btn btn-danger" role="button">SW[17]</a>
+                    </div>
+                    
+                    
+                    {% else %}
+                    is <strong>OFF</strong></h2>
+                    
+                    <div class="col-md-12 text-center">
+                        <a href="/{{13}}/on" class="btn  btn-success" role="button">SW[17]</a>
+                    </div>
+                    
+                    {% endif %}
+                    
+                    <h4></td>
+        
+            	
+        
+          </tr>
+      
+      </table>
+
+
+
+{% endblock %}
+
+
+
+
+
