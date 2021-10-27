@@ -1,7 +1,5 @@
 '''
-Adapted excerpt from Getting Started with Raspberry Pi by Matt Richardson
-Modified by Rui Santos
-Complete project details: http://randomnerdtutorials.com
+Codigo de una Interfaz Gráfica de control de una Tarjeta FPGA en una RPI
 '''
 
 import cv2
@@ -14,11 +12,11 @@ import flask
 
 app = Flask(__name__)
 
-def gen_frames():  # generate frame by frame from camera
+def gen_frames():  # generar frame por frame 
     camera = cv2.VideoCapture(0)
     while True:
-        # Capture frame-by-frame
-        success, frame = camera.read()  # read the camera frame
+        #Capturamos frame por frame
+        success, frame = camera.read()  # Lectura de la camara
         if not success:
             break
         else:
@@ -29,7 +27,7 @@ def gen_frames():  # generate frame by frame from camera
 
 @app.route('/video_feed')
 def video_feed():
-    #Video streaming route. Put this in the src attribute of an img tag
+    #Video streaming route. Poner esto en el atributo src de una etiqueta img
     camera = cv2.VideoCapture(0)
     return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
@@ -63,7 +61,7 @@ GPIO.setup(13, GPIO.OUT)
 
 
 
-# Create a dictionary called pins to store the pin number name and pin state:
+# diccionario "pins" para almacenar el nombre del número de pin y el estado del pin
 pins = {
    2 : {'name' : '', 'state' : GPIO.LOW},
    3 : {'name' : '', 'state' : GPIO.LOW},
@@ -90,8 +88,7 @@ pins = {
    13 : {'name' : '', 'state' : GPIO.LOW},
    }
 
-# Set each pin as an output/input and make it low:
-#for pin in pins:
+# Poner cada pin como salida/entrada e iniciarlos en LOW
 #   GPIO.setup(pin, GPIO.OUT)
 #   GPIO.output(pin, GPIO.LOW)
 GPIO.setup(20, GPIO.IN)
@@ -122,13 +119,12 @@ def stream():
 @app.route("/")
 def main():
    print("main")
-   # For each pin, read the pin state and store it in the pins dictionary:
+   # Para cada pin, lee el estado del pin y guarda en el diccionario de pines:
    for pin in pins:
       pins[pin]['state'] = GPIO.input(pin)
 
 
-   # Put the pin dictionary into the template data dictionary:
-   templateData = {
+   # Poner el listado de pines en la informacion de la plantilla 
       'pins': pins,
    }
 
@@ -143,29 +139,29 @@ def main():
 
 
 
-# The function below is executed when someone requests a URL with the pin number and action in it:
+# La siguiente función se ejecuta cuando alguien solicita una URL con el número de pin y su acción en ellas:
 @app.route("/<changePin>/<action>")
 def action(changePin, action):
-   # Convert the pin from the URL into an integer:
+   # Convierta el pin de la URL en un número entero:
    changePin = int(changePin)
-   # Get the device name for the pin being changed:
+   # Obtener el nombre del dispositivo para el pin que se está cambiando:
    deviceName = pins[changePin]['name']
-   # If the action part of the URL is "on," execute the code indented below:
+   # Si la parte de acción de la URL está "activada", ejecute el código con sangría a continuación
    if action == "on":
       # Set the pin high:
       GPIO.output(changePin, GPIO.HIGH)
-      # Save the status message to be passed into the template:
+      # Guarde el mensaje de estado para pasarlo a la plantilla:
       message = "Turned " + deviceName + " on."
    if action == "off":
       GPIO.output(changePin, GPIO.LOW)
       message = "Turned " + deviceName + " off."
 
-   # For each pin, read the pin state and store it in the pins dictionary:
+   # Para cada pin, lea el estado del pin y guárdelo en el diccionario de pines:
    for pin in pins:
       pins[pin]['state'] = GPIO.input(pin)
       
 
-   # Along with the pin dictionary, put the message into the template data dictionary:
+   # Junto con el diccionario de pines, coloque el mensaje en el diccionario de datos de plantilla:
    templateData = {
       'pins' : pins
    }
