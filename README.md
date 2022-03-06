@@ -31,9 +31,11 @@ Transmisión de video: Este código mostrará los objetos de salida del paso ant
 
 ## 2 Implementación de la interfaz gráfica. 
 Empezando a desarrollar el código definimos las funciones previamente descritas en el diseño de nuestro código de python: 
+```
 -Configuración de los GPIOs (botones) 
 -Configuración de la cámara web(video) 
 -Configuración del servidor(Flask) 
+```
 ### 2.1 Implementación y modificación del entorno según los requerimientos.
 En esta parte abordaremos la implementación de dos de los procedimientos mencionados que son : Configuración de la cámara web y configuración del servidor. 
 Para la implementación de la cámara web y su visualización en la interfaz nos apoyamos de la librería de Opencv la cual nos brinda todo el setup de una transmisión de video dentro la aplicación y que puede personalizarse según las características requeridas del entorno. Como se puede observar las funcionalidades de esta parte establecen a la variable “camera” como la variable de sensor de la cámara web y utilizamos para guardar , leer y transmitir constantemente , y se genere la video transmisión en la interfaz gráfica. El codigo describe las 3 etapas que mencionamos.
