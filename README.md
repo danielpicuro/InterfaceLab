@@ -43,6 +43,7 @@ Para la implementación de la cámara web y su visualización en la interfaz nos
 Figura 1
 Descripción de las etapas del código de video con Opencv. 
 ![image](https://user-images.githubusercontent.com/85809354/156904945-3fdcb41f-76a2-4740-979f-2e30c257d2b2.png)
+
 Configuración del servidor: 
 Como se detalló usamos la librería de Flask, que nos dará una URL de activación para la plataforma. 
 Esta dirección es la dirección ip host de nuestro Raspberry pi al cual se le adiciona “80” porque ese será el puerto que usaremos para el servidor.Como se ve en la imagen:
@@ -93,6 +94,7 @@ Ahora observamos la interfaz y como primer componente observable tenemos el vide
 Figura 8 
 Interfaz Gráfica de laboratorio remoto 
 ![image](https://user-images.githubusercontent.com/85809354/156905032-3abedba8-7d1b-4441-848c-07016f0a8969.png)
+
 Abajo de esta tenemos los botones que corresponden a los botones que se usarán en la tarjeta FPGA , y se visualiza el estado de cada uno de estos. 
 Para verificar su funcionamiento probamos el cambio de estado de uno de estos, de encendido a apagado y viceversa.
 
