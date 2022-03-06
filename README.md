@@ -67,7 +67,8 @@ Figura 4
 Código para la acción de los estados de los GPIOs
 ![image](https://user-images.githubusercontent.com/85809354/156904974-70fd278b-fbce-4a73-8c80-2e53d298175b.png)
 
-### 2.5 Puesta en marcha de la comunicación del hardware con la interfaz gráfica. En este parte podemos observar cómo al modificar los estados correspondientes a los GPIOs del raspberry en la interfaz gráfica habilitada en el servidor , este responde con un cambio físico en el circuito , manifestando la comunicación generada por la instancia de código correspondiente a los actuadores de GPIO y su consecuente cambio de voltaje que habilitará los led del ejemplo de la siguiente imagen:
+### 2.5 Puesta en marcha de la comunicación del hardware con la interfaz gráfica. 
+En este parte podemos observar cómo al modificar los estados correspondientes a los GPIOs del raspberry en la interfaz gráfica habilitada en el servidor , este responde con un cambio físico en el circuito , manifestando la comunicación generada por la instancia de código correspondiente a los actuadores de GPIO y su consecuente cambio de voltaje que habilitará los led del ejemplo de la siguiente imagen:
 
 Figura 5 
 Cambio de estado del led por activación de un gpio del Raspberry 
