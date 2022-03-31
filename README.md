@@ -84,7 +84,7 @@ Ejecutamos la aplicación completa en el raspberry dentro de una red Lan hogar s
 
 Figura 6 
 Ejecutando el proyecto con nombre app.py en el command window de Raspbian
-![image](https://user-images.githubusercontent.com/85809354/156904982-bd9dda0f-4774-4b39-bb01-020209b85463.png)
+![image](https://user-images.githubusercontent.com/85809354/161139052-70ec8e2d-78b2-446d-87b2-d538a9789672.png)
 
 Al arrancar podemos visualizar la dirección en la cual nuestro proyecto está ejecutándose dentro de la LAN , esto viene derivado de la configuración del servidor en python. Una vez ejecutado el archivo python , procedemos a copiar esta dirección en el navegador que tengamos disponible y tendremos acceso a la interfaz gráfica. 
 
