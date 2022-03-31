@@ -90,14 +90,15 @@ Al arrancar podemos visualizar la dirección en la cual nuestro proyecto está e
 
 Figura 7 
 Acceso a la interfaz gráfica mediante la dirección web. 
-![image](https://user-images.githubusercontent.com/85809354/156904989-1c524f9d-146e-40d3-952b-f98a07bbcf83.png)
+![image](https://user-images.githubusercontent.com/85809354/161140168-0e268a3d-5e1a-46f1-9ad3-ac139d886b45.png)
 
 Ahora observamos la interfaz y como primer componente observable tenemos el video en vivo de la tarjeta FPGA , el cual se llega a monitorear los cambios hechos en los botones y switches en la tarjeta .
 
 
 Figura 8 
 Interfaz Gráfica de laboratorio remoto 
-![image](https://user-images.githubusercontent.com/85809354/156905032-3abedba8-7d1b-4441-848c-07016f0a8969.png)
+![image](https://user-images.githubusercontent.com/85809354/161140842-79b41aa7-556a-43eb-829c-bea0666be5c7.png)
+
 
 Abajo de esta tenemos los botones que corresponden a los botones que se usarán en la tarjeta FPGA , y se visualiza el estado de cada uno de estos. 
 Para verificar su funcionamiento probamos el cambio de estado de uno de estos, de encendido a apagado y viceversa.
