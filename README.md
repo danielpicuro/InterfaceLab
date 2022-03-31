@@ -42,7 +42,7 @@ Para la implementación de la cámara web y su visualización en la interfaz nos
 
 Figura 1
 Descripción de las etapas del código de video con Opencv. 
-![image](https://user-images.githubusercontent.com/85809354/156904945-3fdcb41f-76a2-4740-979f-2e30c257d2b2.png)
+![image](https://user-images.githubusercontent.com/85809354/161136815-ff228c0a-0fc8-42fa-868e-ad17de13b2e6.png)
 
 Configuración del servidor: 
 Como se detalló usamos la librería de Flask, que nos dará una URL de activación para la plataforma. 
@@ -50,7 +50,8 @@ Esta dirección es la dirección ip host de nuestro Raspberry pi al cual se le a
 
 Figura 2 
 Código correspondiente a la configuración del servidor Flask. 
-![image](https://user-images.githubusercontent.com/85809354/156904952-f343e06b-2b9a-46da-a930-ed59273c9da9.png)
+![image](https://user-images.githubusercontent.com/85809354/161136997-c7701939-ee82-48f9-8bfa-ab766226bc18.png)
+
 
 ### 2.2 Configuración de los GPIOs del RPI a través del setup en Python. 
 Para la primera parte de la configuración de los GPIOs usaremos el orden descrito anteriormente, sumado a esto la librería de python específica para control de los GPIOs. Asi pues se tiene la siguiente codificación
