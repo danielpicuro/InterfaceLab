@@ -52,11 +52,14 @@ Figura 2
 Código correspondiente a la configuración del servidor Flask. 
 ![image](https://user-images.githubusercontent.com/85809354/156904952-f343e06b-2b9a-46da-a930-ed59273c9da9.png)
 
-### 2.2 Configuración de los GPIOs del RPI a través del setup en Python. Para la primera parte de la configuración de los GPIOs usaremos el orden descrito anteriormente, sumado a esto la librería de python específica para control de los GPIOs. Asi pues se tiene la siguiente codificación
+### 2.2 Configuración de los GPIOs del RPI a través del setup en Python. 
+Para la primera parte de la configuración de los GPIOs usaremos el orden descrito anteriormente, sumado a esto la librería de python específica para control de los GPIOs. Asi pues se tiene la siguiente codificación
 
 Figura 3 
 Código correspondiente a la configuración del servidor Flask. 
-![image](https://user-images.githubusercontent.com/85809354/156904959-55173214-ca6f-46a9-a828-dcef72054871.png)
+![image](https://user-images.githubusercontent.com/85809354/161136344-641c4e80-48da-4228-82df-86e02a5abb97.png)
+
+
 
 ### 2.3 Actualización y reparación de los errores que podrían surgir en el entorno. 
 Algunos de los errores surgidos derivan de la función de video en el código de python, puesto que al definir la variable “camera” ,que es la que recoge las imágenes de la cámara como resultado, se generaba un error con respecto al bus de uso del dispositivo. Esto es un error de la librería opencv en complemento con el raspberry. Se revisó este error en un foro de ayuda de programación en python/raspberry.Concluyendo así la solución implementada donde cada uno de las funciones que corresponden al uso del código para el video, definieron a la variable “camera” en su primera línea de código. 
