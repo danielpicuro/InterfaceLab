@@ -54,7 +54,7 @@ Código correspondiente a la configuración del servidor Flask.
 
 
 ### 2.2 Configuración de los GPIOs del RPI a través del setup en Python. 
-Para la primera parte de la configuración de los GPIOs usaremos el orden descrito anteriormente, sumado a esto la librería de python específica para control de los GPIOs. Asi pues se tiene la siguiente codificación
+Para la primera parte de la configuración de los GPIOs usaremos el orden descrito anteriormente, sumado a esto la librería de python específica para control de los GPIOs. Asi pues se tiene la siguiente codificación.
 
 Figura 3 
 Código correspondiente a la configuración del servidor Flask. 
