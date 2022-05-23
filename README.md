@@ -1,7 +1,6 @@
 # InterfaceLab!
 # Construcción de una Interfaz Gráfica con una Raspberry para el control de una tarjeta FPGA
-Daniel Alberto Abanto Delgado / TI UNMSM-UV
--m
+> Daniel Alberto Abanto Delgado / TI UNMSM-UV.
 A continuación, se mostrará el proceso de creación de una interfaz gráfica para el control de una tarjeta FPGA mediante los GPIO de un raspberry, en donde manejaremos los botones y switches de manera remota además de poder visualizar la tarjeta FPGA en tiempo real.
 
 ## 1. Diseño de la interfaz gráfica. 
